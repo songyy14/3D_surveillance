@@ -1,0 +1,5 @@
+# 3D_surveillance
+This work implements a prototype of 3D person surveillance, which fuses all camera views into one consistent 3D scene. In the offline stage, 3D reconstruction of the experiment environment is performed and surveillance cameras are calibrated. In the online stage, the positions of persons are updated using object tracking algorithm (based on KCF), and new persons are added to the tracking list at certain frequency, by comparing the detection and tracking results. Before they are tracked, their identities (person id) are queried using person re-id algorithm (based on trinet feature). Finally all tracked persons are back-projected into the reconstructed 3D environment model as a textured rectangle, and the 3D scene containing both environment and persons are rendered in a separated thread.
+
+## person detection
+we choose [SSD](https://github.com/weiliu89/caffe/tree/ssd/examples) as our person detector. To obtain only person detection with confidence higher than certain threshold, we should modify the example script `caffe/examples/ssd/ssd_detect.py` in the following position:
