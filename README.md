@@ -37,4 +37,4 @@ The rendering of 3D scene is implemented using a C++ 3D graphics library called 
 
 * [Eigen](http://eigen.tuxfamily.org/dox/GettingStarted.html)
 ### Usage
-It is easy to compile and run it in visual studio, just by adding those sources in `rendering` directory into an empty VS project. Note the paths to those required third-party libraries should be set at first.
+It is easy to compile and run it in visual studio, just by adding those sources in `rendering` directory into an empty VS project. Note the paths to those required third-party libraries should be set in VS, and paths to dynamic link libraries of OSG (including thrid-party dlls) should be added to SYSTEM PATH.
